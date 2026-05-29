@@ -40,9 +40,9 @@ This separation allows the GA to focus on the combinatorial structure of trip se
 
 
 ---
-
 ## Repository Structure
 
+```text
 electric-bus-scheduling-ga/
 ├── README.md
 ├── code_showcase/
@@ -65,7 +65,6 @@ electric-bus-scheduling-ga/
         ├── convergence_ga.png
         └── example_schedule.png
 ```
-
 ---
 
 ## Methodology
@@ -321,11 +320,15 @@ This repository does not include the original industrial benchmark data.
 
 ## Author
 
+```text
+
 **Hassan Hijazi**
 Master’s Thesis: *A Genetic Algorithm for Electric Bus Scheduling*
 Freie Universität Berlin
 Department of Mathematics and Computer Science
 
+
+```
 ---
 
 ## Disclaimer
