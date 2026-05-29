@@ -316,14 +316,14 @@ This repository does not include the original industrial benchmark data.
 
 ---
 
-
+```text
 
 ## Author
 
-```text
 
-**Hassan Hijazi**
-Master’s Thesis: *A Genetic Algorithm for Electric Bus Scheduling*
+
+Hassan Hijazi
+Master’s Thesis: A Genetic Algorithm for Electric Bus Scheduling
 Freie Universität Berlin
 Department of Mathematics and Computer Science
 
