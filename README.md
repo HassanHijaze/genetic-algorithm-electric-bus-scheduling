@@ -310,9 +310,7 @@ The public version keeps the main algorithmic components while omitting confiden
 
 ## Results
 
-The thesis evaluated the approach on realistic electric bus scheduling instances with linear and non-linear charging models. The method produced competitive schedules and improved several reference solutions.
-
-This repository does not include the original industrial benchmark data. 
+In the thesis experiments, the GA improved 8 out of 9 linear-charging instances and 7 out of 9 non-linear-charging instances, with best gaps of 7.68% and 7.59%, respectively.
 
 ---
 
