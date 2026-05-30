@@ -325,7 +325,10 @@ The public version keeps the main algorithmic components while omitting confiden
 
 ## Results
 
+
 In the thesis experiments, the GA improved 8 out of 9 linear-charging instances and 7 out of 9 non-linear-charging instances, with best gaps of 7.68% and 7.59%, respectively. These results are reported for the full research implementation and confidential industrial instances, not for the simplified public example.
+
+
 ---
 
 ```text
