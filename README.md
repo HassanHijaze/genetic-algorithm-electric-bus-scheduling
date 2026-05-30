@@ -1,7 +1,7 @@
-**A Genetic Algorithm for Electric Bus Scheduling**  
-Freie Universität Berlin  
-Department of Mathematics and Computer Science
+# A Genetic Algorithm for Electric Bus Scheduling
 
+**Freie Universität Berlin**  
+**Department of Mathematics and Computer Science**
 
 A public demonstration of a genetic-algorithm-based framework for building daily schedules for battery-electric bus fleets.
 
