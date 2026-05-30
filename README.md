@@ -4,12 +4,9 @@ A public demonstration of a genetic-algorithm-based framework for building daily
 
 The project tackles the **Electric Bus Scheduling Problem (EBSP)**: assigning fixed timetabled trips to electric buses while respecting time feasibility, battery limits, depot-only charging, charger availability, and grid-access constraints.
 
-```text
-> **A Genetic Algorithm for Electric Bus Scheduling**
-> Freie Universität Berlin
-> Department of Mathematics and Computer Science
-
-```
+**A Genetic Algorithm for Electric Bus Scheduling**  
+Freie Universität Berlin  
+Department of Mathematics and Computer Science
 
 
 ## Optimization Objective
