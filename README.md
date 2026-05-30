@@ -1,11 +1,44 @@
 # Electric Bus Scheduling with a Genetic Algorithm
 
-A cleaned public implementation of a Genetic Algorithm framework for the **Electric Bus Scheduling Problem (EBSP)**, developed as part of the master’s thesis:
+A public demonstration of a genetic-algorithm-based framework for building daily schedules for battery-electric bus fleets.
 
+The project tackles the **Electric Bus Scheduling Problem (EBSP)**: assigning fixed timetabled trips to electric buses while respecting time feasibility, battery limits, depot-only charging, charger availability, and grid-access constraints.
+
+```text
 > **A Genetic Algorithm for Electric Bus Scheduling**
-> Freie Universität Berlin, Department of Mathematics and Computer Science
+> Freie Universität Berlin
+> Department of Mathematics and Computer Science
 
-The project focuses on constructing daily electric bus duties from fixed timetabled service trips while respecting temporal feasibility, battery limitations, depot-only charging, charging station capacity, and grid-access restrictions.
+```
+
+
+## Optimization Objective
+
+The scheduling objective is to minimize the total operating cost of the electric bus fleet. The cost combines three main components:
+
+* **fleet size**, representing the number of buses required,
+* **total duty time**, representing the total time vehicles are in operation,
+* **total driven distance**, including service trips and deadhead movements.
+
+In simplified form, the objective can be written as:
+
+```text
+minimize total cost =
+    fleet cost
+  + duty-time cost
+  + distance cost
+```
+
+This objective encourages schedules that use fewer buses, avoid unnecessary vehicle time, and reduce non-productive travel.
+
+
+The core idea is a two-stage approach:
+
+1. use a **Genetic Algorithm** to create high-quality time-feasible trip chains;
+2. transform these chains into **energy-feasible vehicle duties** through block construction, depot charging, and duty stitching.
+
+
+
 
 ---
 
@@ -13,7 +46,7 @@ The project focuses on constructing daily electric bus duties from fixed timetab
 
 Electric bus scheduling is more complex than classical vehicle scheduling because a vehicle duty must be feasible not only in time, but also with respect to the battery state of charge. A bus must have enough energy to operate service trips, perform deadhead movements, return to the depot, and recharge during available depot dwell times.
 
-This repository demonstrates a two-stage heuristic framework:
+We demonstrates a two-stage heuristic framework:
 
 1. **Genetic Algorithm stage**
    The GA constructs high-quality **time-feasible trip chains**. At this stage, individuals represent ordered sequences of service trips connected by feasible deadhead movements.
@@ -223,41 +256,29 @@ The final duty can be simulated step by step to verify the battery state of char
 
 ## Input Data Format
 
-The public example uses simple Python dictionaries.
+### Example Input Snapshot
 
-A service trip is represented as:
+The public example uses simplified input tables for service trips and deadhead connections.
 
-```python
-trips = {
-    1: {
-        "start": 28800,
-        "end": 30600,
-        "energy": 20000,
-        "length": 8500,
-    }
-}
-```
-
-A deadhead arc is represented as:
-
-```python
-deadhead = {
-    "duration": 600,
-    "energy": 5000,
-    "length": 3000,
-}
-```
-
-The main arc dictionaries are:
+A service-trip file starts with the number of trips, followed by trip records:
 
 ```text
-dt_best[t]      depot -> trip
-tt_best[u, v]   trip -> trip
-td_best[t]      trip -> depot
-d5_best[t]      depot -> trip after charging
-d6_best[t]      trip -> depot before charging
-```
 
+
+trips    
+
+# ID    from_location_ID    to_location_ID       start_time    end_time    length    energy_per_vehicle_type
+0       1                   2                       12440         14220       3239     12517
+
+
+
+deadheads   
+
+# ID        from_ID    to_ID       duration        length    energy_per_vehicle_type
+0             0          0            660            2109      14021
+
+
+```
 ---
 
 ## Thesis Connection
@@ -298,10 +319,7 @@ This repository is a cleaned public implementation. It is intended to demonstrat
 The following are not included:
 
 * industrial IVU input data,
-* confidential test instances,
-* full production experiment scripts,
-* private result files,
-* institution-specific paths or configurations,
+* detailed route and trip-scheduling data.
 
 
 The public version keeps the main algorithmic components while omitting confidential data and production-specific details.
@@ -310,8 +328,7 @@ The public version keeps the main algorithmic components while omitting confiden
 
 ## Results
 
-In the thesis experiments, the GA improved 8 out of 9 linear-charging instances and 7 out of 9 non-linear-charging instances, with best gaps of 7.68% and 7.59%, respectively.
-
+In the thesis experiments, the GA improved 8 out of 9 linear-charging instances and 7 out of 9 non-linear-charging instances, with best gaps of 7.68% and 7.59%, respectively. These results are reported for the full research implementation and confidential industrial instances, not for the simplified public example.
 ---
 
 ```text
