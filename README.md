@@ -1,12 +1,12 @@
-# Electric Bus Scheduling with a Genetic Algorithm
+**A Genetic Algorithm for Electric Bus Scheduling**  
+Freie Universität Berlin  
+Department of Mathematics and Computer Science
+
 
 A public demonstration of a genetic-algorithm-based framework for building daily schedules for battery-electric bus fleets.
 
 The project tackles the **Electric Bus Scheduling Problem (EBSP)**: assigning fixed timetabled trips to electric buses while respecting time feasibility, battery limits, depot-only charging, charger availability, and grid-access constraints.
 
-**A Genetic Algorithm for Electric Bus Scheduling**  
-Freie Universität Berlin  
-Department of Mathematics and Computer Science
 
 
 ## Optimization Objective
