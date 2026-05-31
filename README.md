@@ -9,7 +9,7 @@ The project tackles the **Electric Bus Scheduling Problem (EBSP)**: assigning fi
 
 
 
-## Optimization Objective
+## Objective
 
 The scheduling objective is to minimize the total operating cost of the electric bus fleet. The cost combines three main components:
 
