@@ -3,10 +3,23 @@
 **Freie Universität Berlin**  
 **Department of Mathematics and Computer Science**
 
-A public demonstration of a genetic-algorithm-based framework for building daily schedules for battery-electric bus fleets.
 
-The project tackles the **Electric Bus Scheduling Problem (EBSP)**: assigning fixed timetabled trips to electric buses while respecting time feasibility, battery limits, depot-only charging, charger availability, and grid-access constraints.
 
+
+A research implementation of a hybrid optimization framework for the **Electric Bus Scheduling Problem (EBSP)**, developed as part of a Master's thesis at Freie Universität Berlin.
+
+The project addresses the challenge of optimizing daily schedules for battery-electric bus fleets by combining evolutionary optimization, large neighborhood search, and energy-aware duty construction. The developed approach was evaluated on industrial electric bus scheduling instances and demonstrated improvements over established reference solutions.
+
+
+## Key Results
+
+The proposed Genetic Algorithm achieved the following results on industrial electric bus scheduling instances:
+
+- Improved **8/9 instances** under linear charging.
+- Improved **7/9 instances** under non-linear charging.
+- Achieved maximum cost reductions of **7.68%** and **7.59%**.
+- Successfully handled heterogeneous electric bus fleets.
+- Generated energy-feasible vehicle duties considering battery constraints and depot charging.
 
 
 ## Objective
